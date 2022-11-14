@@ -1,0 +1,170 @@
+
+body  {
+     background-image:url("snakeskin.jpg");
+     height: 100%;
+     width: 100%;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     align-content: center;
+     font-family: 'Righteous', cursive;
+
+    }
+    .grid{
+        background-color: rgb(227, 219, 208);
+        display: flex;
+        flex-wrap: wrap;
+        width: 600px;
+        height: 600px;
+        border: 10px solid black;
+        margin: 0 auto;
+        border-radius: 4px;
+    }
+    .container {
+        
+        height: 100%;
+        background-color: #E9D398;
+    }
+    .title{
+        padding-left: 3rem;
+        padding-right: 3rem;
+        padding-top: 4rem;
+    }
+    .box{
+        background: #FFFFDE;
+        background-image: linear-gradient(#ffd54f .1em, transparent .1em), linear-gradient(90deg, #ffd54f .1em, transparent .1em);
+        background-size: 3em 3em;
+    }
+    .head {
+        height: 50%;
+        display: flex;
+        justify-content: center;
+    }
+    .head span{
+        background-color: #ffd300;
+        color: whitesmoke;
+        padding: 20px 20px;
+        font-size: 28px;
+        box-shadow: 0px -6px 13px 0px rgba(0, 0, 0, 0.72);
+        animation: animation 2.5s infinite;
+    }
+    @keyframes animation {
+        0%{
+            transform: translateY(0px);
+            box-shadow: 0px 6px 13px 0 rgb(0, 0, 0, 0.72)
+        }
+        50%{
+            transform: translateY(-20px);
+            box-shadow: 0px 6px 13px 0 rgb(0, 0, 0, 0.72)
+        }
+        100%{
+            transform: translateY(0px);
+            box-shadow: 0px 6px 13px 0 rgb(0, 0, 0, 0.72)
+        }
+    }
+    span:nth-child(1){
+        animation-delay: 0.3s;
+    }
+    span:nth-child(2){
+        animation-delay: 0.5s;
+    }
+    span:nth-child(3){
+        animation-delay: 0.7s;
+    }
+    span:nth-child(4){
+        animation-delay: 0.9s;
+    }
+    span:nth-child(5){
+        animation-delay: 1.1s;
+    }
+    span:nth-child(6){
+        animation-delay: 1.3s;
+    }
+    span:nth-child(7){
+        animation-delay: 1.5s;
+    }
+    span:nth-child(8){
+        animation-delay: 1.7s;
+    }   
+    span:nth-child(10){
+        animation-delay: 2.1s;
+    }
+    
+    .box{
+        width: 30px;
+        height: 30px;
+    }
+    #title, #game-over {
+        display: flex;
+        justify-content: center;
+    }
+   
+    .button {
+        padding: 10px 10px;
+        display: flex;
+        justify-content: center;
+    }
+
+    .snake {
+        background-color: #ffd300; 
+    }
+    .food {
+        background-color: rgb(18, 151, 0);
+    }
+    .poison {
+        background-color: rgb(157, 29, 4);
+    }
+    #last {
+        padding: 10px 10px;
+        display: flex;
+        justify-content: center;
+    }
+    
+    .reset-btn {
+        font-family: 'Righteous', cursive;
+        position:relative;
+        margin:20px;
+    }
+  
+    .reset-btn {
+    color: whitesmoke;
+    font-size:30px;
+    text-align: center;
+    text-decoration:none;
+    background-color: #FADA5E;
+    padding:18px 18px;
+     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    text-shadow: 0px 1px 0px #000;
+    box-shadow:inset 0 1px 0 #ffc60e, 0 10px 0 #cc9c00;
+    border-radius: 5px;
+    }
+  
+    .reset-btn:active{
+    top:10px;
+    background-color:#FADA5E;
+    
+    -webkit-box-shadow:inset 0 1px 0 #ffc60e, inset 0 -3px 0 #cc9c00;
+    -moz-box-shadow:inset 0 1px 0 #ffc60e, inset 0 -3px 0 #cc9c00;
+    box-shadow:inset 0 1px 0 #ffc60e, inset 0 -3px 0 #cc9c00;
+    }
+  
+    .reset-btn::after{
+    content:"";
+    padding:4px;
+    position: absolute;
+    bottom:-15px;
+    left:-4px;
+    z-index:-1;
+    background-color:#cc9c00;
+    border-radius: 5px;
+    }
+
+    .score-btn {
+        padding: 10px;
+        font-size: large;
+        background: linear-gradient(#FFFFDE, #FFFFFF) padding-box,
+        linear-gradient(to right, rgb(253, 173, 14), rgb(224, 213, 146)) border-box;
+        border-radius: 50em;
+        border: 4px solid transparent;
+ 
+    }
