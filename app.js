@@ -1,11 +1,12 @@
+
 //Dom Elements
-let grid = document.querySelector('.grid');
+const grid = document.querySelector('.grid');
 const resetButton = document.getElementById('start');
 const scoreDisplay = document.getElementById("score");
 const gameOver = document.getElementById('game-over'); 
 
-
 //GAME STATE
+
 let poisonIndex = 0;
 let intervalTime = 1000;
 let speed = 0.7;
@@ -28,7 +29,7 @@ for(let i =0; i <  400; i++){
     squares.push(box)
 }
 
-//drawing a snake on the grid 
+//creating a snake on the grid 
 currentSnake.forEach(index => squares[index].classList.add('snake'));
 
 //Game starts on load
@@ -51,17 +52,12 @@ window.onload = function resetGame () {
     //re add class of snake to currentSnake
     currentSnake.forEach(index => squares[index].classList.add('snake'))
     timerId = setInterval(move, ++intervalTime)
-
-    resetButton.addEventListener('click', resetGame)
+    
 };
 
-function displayGameOver (){
-
-}
 
 function move (){
     //when the snake reaches the bottom of the grid or top
-    //clear the timer
     if(
         (currentSnake[0] + walls > 400 && direction === 10) ||
         (currentSnake[0] - walls < 0 && direction === -10) ||
@@ -148,6 +144,7 @@ generatePoison()
 
 //creating controls for movement on grid
 function control(e){
+
     if(e.keyCode === 39)
     {
         direction = 1
@@ -161,6 +158,7 @@ function control(e){
     {    
         direction = +walls
     }
+
 }
 
 document.addEventListener('keyup', control)
